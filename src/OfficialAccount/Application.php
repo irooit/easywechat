@@ -13,6 +13,7 @@ namespace EasyWeChat\OfficialAccount;
 
 use EasyWeChat\BasicService;
 use EasyWeChat\Kernel\ServiceContainer;
+use EasyWeChat\OfficialAccount\SubscriptionMessage\Client;
 
 /**
  * Class Application.
@@ -29,6 +30,7 @@ use EasyWeChat\Kernel\ServiceContainer;
  * @property \EasyWeChat\OfficialAccount\User\TagClient                $user_tag
  * @property \EasyWeChat\OfficialAccount\Menu\Client                   $menu
  * @property \EasyWeChat\OfficialAccount\TemplateMessage\Client        $template_message
+ * @property \EasyWeChat\OfficialAccount\SubscriptionMessage\Client    $subscription_message
  * @property \EasyWeChat\OfficialAccount\Material\Client               $material
  * @property \EasyWeChat\OfficialAccount\CustomerService\Client        $customer_service
  * @property \EasyWeChat\OfficialAccount\CustomerService\SessionClient $customer_service_session
@@ -64,6 +66,7 @@ class Application extends ServiceContainer
         OAuth\ServiceProvider::class,
         Menu\ServiceProvider::class,
         TemplateMessage\ServiceProvider::class,
+        SubscriptionMessage\ServiceProvider::class,
         Material\ServiceProvider::class,
         CustomerService\ServiceProvider::class,
         Semantic\ServiceProvider::class,
